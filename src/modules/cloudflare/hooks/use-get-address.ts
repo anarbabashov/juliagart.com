@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Feature, FeatureCollection, Point } from "geojson";
-import { CloudCog } from "lucide-react";
 
 export interface MapboxFeature extends Feature {
   geometry: Point;
