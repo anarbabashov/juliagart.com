@@ -49,6 +49,7 @@ export const photosRouter = createTRPCRouter({
                 countryCode: insertedPhoto.countryCode,
                 photoCount: sql`${citySets.photoCount} + 1`,
                 coverPhotoId: sql`COALESCE(${citySets.coverPhotoId}, ${insertedPhoto.id})`,
+                description: sql`${citySets.description}`,
                 updatedAt: new Date(),
               },
             });

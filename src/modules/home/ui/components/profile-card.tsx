@@ -32,7 +32,7 @@ const ProfileCard = () => {
           </div>
 
           <div className="lg:mt-4 xl:mt-0">
-            <p className="text-text-muted text-[15px]">
+            <p className="text-text-muted text-[15px] mt-5">
               I&apos;m JuliaGart, a photographer dedicated to capturing authentic
               moments and telling stories through creative and emotional
               imagery, wherever my journey takes me.
