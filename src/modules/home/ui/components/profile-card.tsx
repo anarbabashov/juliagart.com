@@ -18,7 +18,7 @@ const ProfileCard = () => {
             {/* AVATAR  */}
             <Avatar className="size-[60px]">
               <AvatarImage
-                src="https://avatars.githubusercontent.com/u/16572906?s=400&u=a304af70d12572524d540553425d78ff4d1a101a&v=4"
+                src="https://pub-e1f3891360c64489aeae04e051dff80e.r2.dev/photoblog/photos/Julia-%20Avatar.jpg"
                 alt="Avatar"
               />
               <AvatarFallback>EC</AvatarFallback>
@@ -48,13 +48,6 @@ const ProfileCard = () => {
       <div className="col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 flex flex-col justify-between gap-3">
         <ContactCard
           title="Instagram"
-          href="#"
-        />
-
-        <ContactCard title="GitHub" href="#" />
-
-        <ContactCard
-          title="Xiaohongshu"
           href="#"
         />
 

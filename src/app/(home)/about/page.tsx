@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 // Internal dependencies - UI Components
 import Footer from "../../../modules/home/ui/components/footer";
 import AboutCard from "../../../modules/home/ui/components/about-card";
-import TechMarquee from "@/components/tech-marquee";
+//import TechMarquee from "@/components/tech-marquee";
 import CameraCard from "../../../modules/home/ui/components/camera-card";
 import ProfileCard from "../../../modules/home/ui/components/profile-card";
 import CardContainer from "@/components/card-container";
@@ -47,9 +47,9 @@ const AboutPage = () => {
         </PageTransitionItem>
 
         {/* TECH CARD  */}
-        <PageTransitionItem>
+        {/* <PageTransitionItem>
           <TechMarquee />
-        </PageTransitionItem>
+        </PageTransitionItem> */}
 
         {/* CAMERA CARD  */}
         <PageTransitionItem>
@@ -59,44 +59,62 @@ const AboutPage = () => {
         <PageTransitionItem>
           <CardContainer>
             <div className="flex items-center justify-between p-6">
-              <h1 className="text-lg">SONY</h1>
-              <p className="text-sm">Alpha 7RⅡ</p>
+              <h1 className="text-lg">Nikon</h1>
+              <p className="text-sm">Z7</p>
             </div>
           </CardContainer>
         </PageTransitionItem>
+
+        <PageTransitionItem>
+          <CardContainer>
+            <div className="flex items-center justify-between p-6">
+              <h1 className="text-lg">Nikkor</h1>
+              <p className="text-sm">85 mm 1.4</p>
+            </div>
+          </CardContainer>
+        </PageTransitionItem>
+
+        <PageTransitionItem>
+          <CardContainer>
+            <div className="flex items-center justify-between p-6">
+              <h1 className="text-lg">Nikkor</h1>
+              <p className="text-sm">35 mm 1.4</p>
+            </div>
+          </CardContainer>
+        </PageTransitionItem>
+
+        <PageTransitionItem>
+          <CardContainer>
+            <div className="flex items-center justify-between p-6">
+              <h1 className="text-lg">Nikkor</h1>
+              <p className="text-sm">70-200 mm 2.8</p>
+            </div>
+          </CardContainer>
+        </PageTransitionItem>
+
+        <PageTransitionItem>
+          <CardContainer>
+            <div className="flex items-center justify-between p-6">
+              <h1 className="text-lg">Nikkor</h1>
+              <p className="text-sm">24-70 mm 2.8</p>
+            </div>
+          </CardContainer>
+        </PageTransitionItem>
+
+        <PageTransitionItem>
+          <CardContainer>
+            <div className="flex items-center justify-between p-6">
+              <h1 className="text-lg">Nikkor</h1>
+              <p className="text-sm">14-24 mm 2.8</p>
+            </div>
+          </CardContainer>
+        </PageTransitionItem>        
 
         <PageTransitionItem>
           <CardContainer>
             <div className="flex items-center justify-between p-6">
               <h1 className="text-lg">DJI</h1>
-              <p className="text-sm">Air 2S</p>
-            </div>
-          </CardContainer>
-        </PageTransitionItem>
-
-        <PageTransitionItem>
-          <CardContainer>
-            <div className="flex items-center justify-between p-6">
-              <h1 className="text-lg">Tamron</h1>
-              <p className="text-sm">50-400mm F/4.5-6.3 Di III VC VXD</p>
-            </div>
-          </CardContainer>
-        </PageTransitionItem>
-
-        <PageTransitionItem>
-          <CardContainer>
-            <div className="flex items-center justify-between p-6">
-              <h1 className="text-lg">Sigma</h1>
-              <p className="text-sm">35mm F/1.4 DG HSM</p>
-            </div>
-          </CardContainer>
-        </PageTransitionItem>
-
-        <PageTransitionItem>
-          <CardContainer>
-            <div className="flex items-center justify-between p-6">
-              <h1 className="text-lg">Viltrox</h1>
-              <p className="text-sm">AF 40mm F/2.5 FE</p>
+              <p className="text-sm">Air 3</p>
             </div>
           </CardContainer>
         </PageTransitionItem>

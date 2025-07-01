@@ -72,7 +72,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
                 {/* AVATAR  */}
                 <Avatar className="size-[60px]">
                   <AvatarImage
-                    src="https://avatars.githubusercontent.com/u/16572906?s=400&u=a304af70d12572524d540553425d78ff4d1a101a&v=4"
+                    src="https://pub-e1f3891360c64489aeae04e051dff80e.r2.dev/photoblog/photos/Julia-%20Avatar.jpg"
                     alt="Avatar"
                   />
                   <AvatarFallback>EC</AvatarFallback>

@@ -1,4 +1,8 @@
 const normalizeSrc = (src: string) => {
+  // If it's already a full URL, return it as is
+  if (src.startsWith('http')) {
+    return src;
+  }
   return src.startsWith("/") ? src.slice(1) : src;
 };
 
@@ -11,19 +15,14 @@ export default function cloudflareLoader({
   width: number;
   quality?: number;
 }) {
-  if (src.startsWith("/")) {
+  // If it's a local image or already a full URL, return as is
+  if (src.startsWith("/") || src.startsWith("http")) {
     return src;
   }
-  // if (process.env.NODE_ENV === "development") {
-  //   return src;
-  // }
-  const params = [`width=${width}`];
-  if (quality) {
-    params.push(`quality=${quality}`);
-  }
-  const paramsString = params.join(",");
 
-  return `${process.env.CLOUDFLARE_R2_PUBLIC_URL}/cdn-cgi/image/${paramsString}/${normalizeSrc(
-    src
-  )}`;
+  // Use the hardcoded URL
+  const baseUrl = "https://pub-e1f3891360c64489aeae04e051dff80e.r2.dev";
+  const normalizedSrc = normalizeSrc(src);
+
+  return `${baseUrl}/${normalizedSrc}`;
 }

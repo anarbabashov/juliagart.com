@@ -6,11 +6,15 @@ const nextConfig: NextConfig = {
     loaderFile: "./image-loader.ts",
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "juliagart.com",
+        protocol: "https",
+        hostname: "pub-e1f3891360c64489aeae04e051dff80e.r2.dev",
         port: "",
+        pathname: "**",
       },
     ],
+  },
+  env: {
+    CLOUDFLARE_R2_PUBLIC_URL: "https://pub-e1f3891360c64489aeae04e051dff80e.r2.dev",
   },
 };
 

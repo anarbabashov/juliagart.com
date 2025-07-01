@@ -22,7 +22,7 @@ const getPublicUrl = cache((filename: string, folder: string) => {
       message: "CLOUDFLARE_R2_PUBLIC_URL is not configured",
     });
   }
-  return `${publicUrl}/${folder}/${filename}`;
+  return `${publicUrl}/photoblog/${folder}/${filename}`;
 });
 
 export const cloudflareR2Router = createTRPCRouter({

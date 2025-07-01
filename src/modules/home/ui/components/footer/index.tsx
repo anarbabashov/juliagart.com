@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row gap-4 items-center">
         {/* AVATAR  */}
         <Avatar className="size-[60px]">
-          <AvatarImage src="https://avatars.githubusercontent.com/u/16572906?s=400&u=a304af70d12572524d540553425d78ff4d1a101a&v=4" />
+          <AvatarImage src="https://pub-e1f3891360c64489aeae04e051dff80e.r2.dev/photoblog/photos/Julia-%20Avatar.jpg" />
           <AvatarFallback>EC</AvatarFallback>
         </Avatar>
 
@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
       <div className="grid lg:w-full grid-cols-1 lg:grid-cols-3 gap-7 lg:gap-14">
         <FooterNav
-          title="Pages"
+          title=""
           links={[
             { title: "Home", href: "/" },
             { title: "Travel", href: "/travel" },
@@ -28,14 +28,14 @@ const Footer = () => {
             { title: "About", href: "/about" },
           ]}
         />
-        <FooterNav
+        {/* <FooterNav
           title="CMS"
           links={[{ title: "Dashboard", href: "/dashboard" }]}
         />
         <FooterNav
           title="Utility"
           links={[{ title: "Screensaver", href: "/screensaver" }]}
-        />
+        /> */}
       </div>
 
       {/* Attribution */}
