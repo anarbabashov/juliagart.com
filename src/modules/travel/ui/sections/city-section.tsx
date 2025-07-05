@@ -78,7 +78,7 @@ const CitySectionSuspense = ({ city }: Props) => {
 
               <div>
                 <p className="text-text-muted text-[15px]">
-                  {cityData.description}
+                  {cityData.description || "No description available yet."}
                 </p>
               </div>
             </div>
