@@ -48,12 +48,12 @@ const ProfileCard = () => {
       <div className="col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 flex flex-col justify-between gap-3">
         <ContactCard
           title="Instagram"
-          href="#"
+          href="https://www.instagram.com/julia_gart"
         />
 
         <ContactCard
           title="Contact me"
-          href="mailto:test@test.com"
+          href="mailto:juliagartbox@gmail.com"
           className="bg-primary text-white hover:text-black dark:text-black dark:hover:text-white"
         />
       </div>

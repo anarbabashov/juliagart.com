@@ -83,6 +83,6 @@ export const blogRouter = createTRPCRouter({
       .orderBy(desc(posts.updatedAt))
       .limit(1);
 
-    return data;
+    return data || null;
   }),
 });
