@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
  * @param {string} id - The id of the card.
  * @param {string} image - The image of the card.
  * @param {string} title - The title of the card.
+ * @param {string} description - The description of the card.
  * @param {string} location - The location of the card.
  * @param {string} camera - The camera of the card.
  * @param {string} blurData - The blur data of the card.
@@ -29,6 +30,7 @@ interface FlipCardProps extends React.HTMLAttributes<HTMLDivElement> {
   id: string;
   image: string;
   title: string;
+  description: string;
   location: string;
   camera: string;
   blurData: string;
@@ -43,6 +45,7 @@ export default function FlipCard({
   id,
   image,
   title,
+  description,
   location,
   camera,
   blurData,
@@ -113,6 +116,9 @@ export default function FlipCard({
             <div className="absolute top-6 left-6">
               <div className="flex flex-col gap-2">
                 <h1 className="text-xl lg:text-3xl text-white">{title}</h1>
+                {description && (
+                  <p className="text-white text-sm">{description}</p>
+                )}
                 <div className="flex items-center gap-2">
                   <FiMapPin className="text-white" size={14} />
                   <span className="text-white text-sm">{location}</span>

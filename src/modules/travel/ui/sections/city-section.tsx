@@ -122,6 +122,7 @@ const CitySectionSuspense = ({ city }: Props) => {
               id={photo.id}
               image={photo.url}
               title={photo.title || ""}
+              description={photo.description || ""}
               location={photo.city + ", " + photo.country}
               camera={photo.make + " " + photo.model}
               blurData={photo.blurData}
