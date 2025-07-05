@@ -1,8 +1,9 @@
-import { baseProcedure, createTRPCRouter } from "@/trpc/init";
+import { baseProcedure, createTRPCRouter, protectedProcedure } from "@/trpc/init";
 import { db } from "@/db/drizzle";
 import { and, desc, eq, lt, or } from "drizzle-orm";
 import { citySets } from "@/db/schema/photos";
 import { z } from "zod";
+import { TRPCError } from "@trpc/server";
 
 export const travelRouter = createTRPCRouter({
   getLatestTravel: baseProcedure.query(async () => {
@@ -63,5 +64,40 @@ export const travelRouter = createTRPCRouter({
         : null;
 
       return { items, nextCursor };
+    }),
+  updateCitySetDescription: protectedProcedure
+    .input(
+      z.object({
+        id: z.string().uuid(),
+        description: z.string(),
+      })
+    )
+    .mutation(async ({ input }) => {
+      const { id, description } = input;
+
+      try {
+        const [updatedCitySet] = await db
+          .update(citySets)
+          .set({
+            description,
+            updatedAt: new Date(),
+          })
+          .where(eq(citySets.id, id))
+          .returning();
+
+        if (!updatedCitySet) {
+          throw new TRPCError({
+            code: "NOT_FOUND",
+            message: "City set not found",
+          });
+        }
+
+        return updatedCitySet;
+      } catch (error) {
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to update city set description",
+        });
+      }
     }),
 });
