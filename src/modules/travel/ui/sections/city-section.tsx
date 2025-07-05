@@ -38,6 +38,9 @@ const CitySectionSuspense = ({ city }: Props) => {
     (photo) => photo.id !== cityData.coverPhoto.id
   );
 
+  // Get description based on availability
+  const descriptionToShow = cityData.description || cityData.coverPhoto.description || "No description available yet.";
+
   return (
     <div className="flex flex-col gap-3 lg:gap-0 lg:flex-row w-full">
       {/* LEFT CONTENT - Fixed */}
@@ -76,9 +79,9 @@ const CitySectionSuspense = ({ city }: Props) => {
                 </div>
               </div>
 
-              <div>
+              <div className="space-y-2">
                 <p className="text-text-muted text-[15px]">
-                  {cityData.description || "No description available yet."}
+                  {descriptionToShow}
                 </p>
               </div>
             </div>
