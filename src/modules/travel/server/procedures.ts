@@ -94,6 +94,7 @@ export const travelRouter = createTRPCRouter({
 
         return updatedCitySet;
       } catch (error) {
+        console.error('Error updating city set description:', error);
         throw new TRPCError({
           code: "INTERNAL_SERVER_ERROR",
           message: "Failed to update city set description",
